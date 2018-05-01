@@ -484,7 +484,7 @@ BeesTempFile::create()
 	int flags = ioctl_iflags_get(m_fd);
 	flags |= FS_COMPR_FL;
 	BEESTRACE("Setting FS_COMPR_FL on m_fd " << name_fd(m_fd) << " flags " << to_hex(flags));
-	ioctl_iflags_set(m_fd, flags);
+	//ioctl_iflags_set(m_fd, flags);
 
 	// Always leave first block empty to avoid creating a file with an inline extent
 	m_end_offset = BLOCK_SIZE_CLONE;
